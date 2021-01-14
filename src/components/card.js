@@ -1,8 +1,11 @@
 import React from 'react';
+import './styles.css'
 
+import Link from 'gatsby';
 export function Card({ url, title }) {
+    const abc = `https://${url}`
     return <div className="card">
-        <p className="url"><b>{url}</b></p>
+        <a href={abc} className="url">{abc}</a>
         <p className="title">{title}</p>
     </div>
 }

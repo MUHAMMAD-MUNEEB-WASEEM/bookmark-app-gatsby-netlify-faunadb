@@ -47,23 +47,22 @@ export default function Home() {
     if (loading)
         return <h3>Loading..</h3>
 
-    return <div className="container">
+    return <div className="fullscreen"> 
+    <div className="container">
 
         <h2>Add New Bookmark</h2>
         <label>
-            Enter Bookmark Tite: <br />
-            <input type="text" ref={node => titleField = node} />
+            <input type="text" ref={node => titleField = node} placeholder="Enter Bookmark Title:"/>
         </label>
 
         <br />
-        <label>
-            Enter Bookmark Url: <br />
-            <input type="text" ref={node => urlField = node} />
+        <label> 
+            <input type="text" ref={node => urlField = node} placeholder="Enter Bookmark Url:" />
         </label>
 
         <br />
         <br />
-        <button onClick={handleSubmit}>Add Bookmark</button>
+        <button onClick={handleSubmit} className="btn">Add Bookmark</button>
 
         <h2>My Bookmark List</h2>
         {/* {JSON.stringify(data.bookmarks)} */}
@@ -72,5 +71,6 @@ export default function Home() {
             {data?.bookmarks?.map((bm) => <Card key={bm.id} url={bm.url} title={bm.title} />)}
         </div>
 
+    </div>
     </div>
 }
