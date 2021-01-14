@@ -1,4 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server-lambda")
+require('dotenv').config();
 var faunadb = require("faunadb"),
   q = faunadb.query
 
@@ -21,7 +22,7 @@ const resolvers = {
     bookmarks: async (root, args, context) => {
       try {
         var adminClient = new faunadb.Client({
-          secret: 'fnAD-ET2PtACAG6A5sQWqwwTJIQLVDCwIBGosgg2',
+          secret: process.env.FAUNA,
         })
 
         const result = await adminClient.query(
@@ -49,7 +50,7 @@ const resolvers = {
       console.log(title, url)
       try {
         var adminClient = new faunadb.Client({
-          secret: 'fnAD-ET2PtACAG6A5sQWqwwTJIQLVDCwIBGosgg2',
+          secret: process.env.FAUNA,
         })
 
         const result = await adminClient.query(
