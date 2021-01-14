@@ -17,6 +17,8 @@
   "license": "0BSD",
   "dependencies": {
     "@apollo/client": "^3.3.6",
+    "apollo-server-lambda": "^2.19.1",
+    "faunadb": "^4.0.0",
     "gatsby": "^2.26.1",
     "graphql": "^15.4.0",
     "react": "^16.13.1",
