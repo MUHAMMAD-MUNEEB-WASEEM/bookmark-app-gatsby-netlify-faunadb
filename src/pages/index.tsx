@@ -51,14 +51,16 @@ export default function Home() {
     <div className="container">
 
         <h2>Add New Bookmark</h2>
-        <label>
-            <input type="text" ref={node => titleField = node} placeholder="Enter Bookmark Title:"/>
-        </label>
+        <form>
+            <label>
+                <input type="text" ref={node => titleField = node} placeholder="Enter Bookmark Title:"/>
+            </label>
 
-        <br />
-        <label> 
-            <input type="text" ref={node => urlField = node} placeholder="Enter Bookmark Url:" />
-        </label>
+            <br />
+            <label> 
+                <input type="text" ref={node => urlField = node} placeholder="Enter Bookmark Url:" />
+            </label>
+        </form>
 
         <br />
         <br />
